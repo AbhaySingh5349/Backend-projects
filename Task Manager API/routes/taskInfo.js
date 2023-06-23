@@ -31,4 +31,8 @@ taskRouter.route("/:taskId").delete(deleteTask);
 // UPDATE task with specific id
 taskRouter.route("/:taskId").put(updateTask);
 
+// GET task based on priorities
+const priorityInfo = require("./priorityInfo.js");
+taskRouter.use("/priority", priorityInfo);
+
 module.exports = taskRouter;
