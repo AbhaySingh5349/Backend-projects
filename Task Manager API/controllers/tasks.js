@@ -8,6 +8,23 @@ const getAllTasks = (req, res) => {
   res.status(200).send(taskData.tasks_list);
 };
 
+const getCompletedTasks = (req, res) => {
+  let tasks_arr = taskData.tasks_list;
+
+  let completed_tasks_arr = tasks_arr.filter(
+    (task) => task.is_completed == true
+  );
+
+  completed_tasks_arr.sort((first, second) => {
+    let d1 = new Date(first.date);
+    let d2 = new Date(second.date);
+
+    return d1 < d2 ? -1 : 1;
+  });
+
+  res.status(200).send(completed_tasks_arr);
+};
+
 const getTaskWithId = (req, res) => {
   let tasks_arr = taskData.tasks_list;
   const req_task_id = req.params.taskId;
@@ -82,6 +99,7 @@ const updateTask = (req, res) => {
 
 module.exports = {
   getAllTasks,
+  getCompletedTasks,
   getTaskWithId,
   addTask,
   deleteTask,

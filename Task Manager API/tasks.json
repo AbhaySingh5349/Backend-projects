@@ -4,25 +4,36 @@
       "id": 1,
       "description": "Clean room",
       "is_completed": false,
-      "priority": "high"
+      "priority": "high",
+      "date": "Jun 4 2023 9:00:00 AM"
     },
     {
       "id": 2,
       "description": "Read system design book",
       "is_completed": true,
-      "priority": "medium"
+      "priority": "medium",
+      "date": "Jun 3 2023 2:00:00 PM"
     },
     {
       "id": 3,
       "description": "bring fruits",
       "is_completed": false,
-      "priority": "low"
+      "priority": "low",
+      "date": "Jun 3 2023 10:00:00 PM"
     },
     {
       "id": 4,
-      "description": "get hair cut and bring stationary",
+      "description": "get hair cut",
       "is_completed": true,
-      "priority": "medium"
+      "priority": "medium",
+      "date": "Jun 4 2023 10:00:00 AM"
+    },
+    {
+      "id": 5,
+      "description": "solve leetcode daily challenge",
+      "is_completed": false,
+      "priority": "high",
+      "date": "Jun 4 2023 07:00:00 AM"
     }
   ]
 }
