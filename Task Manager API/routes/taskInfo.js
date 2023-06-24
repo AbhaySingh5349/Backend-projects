@@ -10,7 +10,6 @@ taskRouter.use(bodyParser.json());
 // controllers
 const {
   getAllTasks,
-  getCompletedTasks,
   getTaskWithId,
   addTask,
   deleteTask,
@@ -19,9 +18,6 @@ const {
 
 // GET all tasks
 taskRouter.route("/").get(getAllTasks);
-
-// GET completed tasks
-taskRouter.route("/:completed").get(getCompletedTasks);
 
 // GET task with specific id
 taskRouter.route("/:taskId").get(getTaskWithId); // ':' represents dynamic parameter which can change with request

@@ -4,11 +4,7 @@ const taskData = require("../tasks.json");
 const validator = require("../helpers/validator.js");
 const generic_functions = require("../helpers/generic_functions.js");
 
-const getAllTasks = (req, res) => {
-  res.status(200).send(taskData.tasks_list);
-};
-
-const getCompletedTasks = (req, res) => {
+const getCompletedTasks = () => {
   let tasks_arr = taskData.tasks_list;
 
   let completed_tasks_arr = tasks_arr.filter(
@@ -22,7 +18,24 @@ const getCompletedTasks = (req, res) => {
     return d1 < d2 ? -1 : 1;
   });
 
-  res.status(200).send(completed_tasks_arr);
+  return completed_tasks_arr;
+};
+
+const getAllTasks = (req, res) => {
+  let queries = Object.keys(req.query); // storing "keys" of queries in URL
+
+  if (queries.length > 0 && req.query.completed_status) {
+    let result = getCompletedTasks(res);
+
+    if (result.length === 0) {
+      res.status(400).send("No task was completed");
+    } else {
+      res.status(200).send(result);
+    }
+    return;
+  }
+
+  res.status(200).send(taskData.tasks_list);
 };
 
 const getTaskWithId = (req, res) => {
@@ -99,7 +112,6 @@ const updateTask = (req, res) => {
 
 module.exports = {
   getAllTasks,
-  getCompletedTasks,
   getTaskWithId,
   addTask,
   deleteTask,
