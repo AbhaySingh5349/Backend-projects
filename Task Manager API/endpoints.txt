@@ -1,6 +1,6 @@
 GET /tasks: Retrieve all tasks.
 
-GET /tasks/completed: Retrieve tasks which arev completed and sorted based on creation date
+GET /tasks/?completed_status=true: Retrieve tasks which are completed and sorted based on creation date
 
 GET /tasks/:id: Retrieve a single task by its ID.
 
