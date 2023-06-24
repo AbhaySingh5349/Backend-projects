@@ -24,7 +24,7 @@ const getCompletedTasks = () => {
 const getAllTasks = (req, res) => {
   let queries = Object.keys(req.query); // storing "keys" of queries in URL
 
-  if (queries.length > 0 && req.query.completed_status) {
+  if (queries.length > 0 && req.query.completed_status == 'true') {
     let result = getCompletedTasks(res);
 
     if (result.length === 0) {
