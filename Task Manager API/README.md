@@ -3,5 +3,5 @@ The Task Manager API is a RESTful API built with Node.js and Express.js. It allo
 
 **Prerequisites**
 To run this project, you need to have the following software installed on your machine:
-*Node.js (version 12 or higher)
-*npm (Node Package Manager)
+#^Node.js (version 12 or higher)
+#^npm (Node Package Manager)
