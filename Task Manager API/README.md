@@ -29,6 +29,7 @@ To run this project, you need to have the following software installed on your m
 
   **Task Object**
   A task object has the following attributes:
+  ```
   {
       "id": NUMBER,
       "description": STRING,
@@ -36,6 +37,7 @@ To run this project, you need to have the following software installed on your m
       "priority": STRING,
       "date": STRING
     }
+```
 
   **Request Format**
   * **POST** and **PUT** requests require a request body in JSON format. The request body should contain the task attributes (id, description, completed status, and priority).
