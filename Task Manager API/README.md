@@ -7,15 +7,15 @@ To run this project, you need to have the following software installed on your m
 * npm (Node Package Manager)
 
 # Installation
-1. Clone the repository to your local machine:
+1. Clone the repository to your local machine:<br />
    ```git clone https://github.com/AbhaySingh5349/Backend-projects.git```
-2. Install the dependencies:
+2. Install the dependencies:<br />
    ```npm install```
 
 # Usage
-1. Start the API server:
+1. Start the API server:<br />
    ``` npm start ```
-2. The server will start running on
+2. The server will start running on<br />
    ``` http://localhost:3000 ```
 
 # API Endpoints
