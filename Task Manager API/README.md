@@ -8,7 +8,7 @@ To run this project, you need to have the following software installed on your m
 
 # Installation
 1. Clone the repository to your local machine:
-   https://github.com/AbhaySingh5349/Backend-projects.git
+   [https://github.com/AbhaySingh5349/Backend-projects.git](https://github.com/AbhaySingh5349/Backend-projects.git)
 2. Install the dependencies:
    npm start
 
