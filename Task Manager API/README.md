@@ -14,7 +14,7 @@ To run this project, you need to have the following software installed on your m
 
 # Usage
 1. Start the API server:
-2. The server will start running on http://localhost:3000
+2. The server will start running on http://<i></i>localhost:3000
 
 # API Endpoints
 * GET /tasks => Retrieves all tasks.
