@@ -8,13 +8,15 @@ To run this project, you need to have the following software installed on your m
 
 # Installation
 1. Clone the repository to your local machine:
-   git clone https://<i></i>github.com/AbhaySingh5349/Backend-projects.git
+   ```git clone https://<i></i>github.com/AbhaySingh5349/Backend-projects.git```
 2. Install the dependencies:
-   npm start
+   ```npm install```
 
 # Usage
 1. Start the API server:
-2. The server will start running on http://<i></i>localhost:3000
+   ``` npm start ```
+2. The server will start running on
+   ``` http://<i></i>localhost:3000 ```
 
 # API Endpoints
 * GET /tasks => Retrieves all tasks.
