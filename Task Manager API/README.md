@@ -25,19 +25,17 @@ To run this project, you need to have the following software installed on your m
 * PUT /tasks/:id => Update an existing task by its ID.
 * DELETE /tasks/:id => Delete a task by its ID.
 
-  # Request and Response Format
+# Request and Response Format
 
   **Task Object**
   A task object has the following attributes:
-  ```
-  {
+  ```{
       "id": NUMBER,
       "description": STRING,
       "is_completed": BOOLEAN,
       "priority": STRING,
       "date": STRING
-    }
-```
+    }```
 
   **Request Format**
   * **POST** and **PUT** requests require a request body in JSON format. The request body should contain the task attributes (id, description, completed status, and priority).
