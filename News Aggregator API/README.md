@@ -45,6 +45,22 @@ To run this project, you need to have the following software installed on your m
   }
 ```
 
+  **Register Response**
+  
+  ```
+   {
+    "user": {
+        "name": "abhay 2",
+        "email": "c@gmail.com",
+        "password": "$2b$12$dMzCdyMI5Jp/MPG.zwUDBujUk86iKdv92khs97IKVKaMdgNXHklAS",
+        "_id": "64a5282f1d7aad36f434bf89",
+        "createdAt": "2023-07-05T08:22:07.333Z",
+        "__v": 0
+    },
+    "message": "User created successfully"
+   }
+  ```
+
   **Login Response**
   
   ```
