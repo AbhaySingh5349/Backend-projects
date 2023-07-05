@@ -18,6 +18,7 @@ To run this project, you need to have the following software installed on your m
    ``` npm start ```
 2. The server will start running on<br />
    ``` http://localhost:3000 ```
+3. Add Authorization to headers to access endpoints with value => JWT {token}
 
 # API Endpoints
 * POST /auth/register => Register as new user.
