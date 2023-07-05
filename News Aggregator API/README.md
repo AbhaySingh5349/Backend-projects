@@ -44,3 +44,29 @@ To run this project, you need to have the following software installed on your m
    "password": STRING
   }
 ```
+
+  **Login Response**
+  
+  ```
+  {
+    "user_obj": {
+        "user": {
+            "_id": "64a406069c2be08f5deec3ed",
+            "name": "abc",
+            "email": "abc@gmail.com",
+            "password": "$2b$12$M2g5YGt9pIwfYYmHY2HrDuP0NH7KJwAFIGL6k1VmfU4ZZjghPNWF2",
+            "createdAt": "2023-07-04T11:44:06.171Z",
+            "__v": 0
+        },
+        "message": "User logged in successfully!"
+    },
+    "token": {
+        "access": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGE0MDYwNjljMmJlMDhmNWRlZWMzZWQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjg4NTM4NTM4LCJleHAiOjE2ODg1NDIxMzh9.2UrKkCbMGLkxI8QPD92CWb59kRimNeD5wcCVP_bJYxo",
+            "expires": "2023-07-05T07:28:58.000Z"
+        }
+    }
+}
+
+```
+   
