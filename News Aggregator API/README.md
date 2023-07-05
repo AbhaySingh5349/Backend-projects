@@ -30,17 +30,17 @@ To run this project, you need to have the following software installed on your m
   **Prefernce Object**
   A preference object has the following attributes:
   ```
-{
+  {
     "categories":["cat_1", "cat_2", ...]
-}
-```
+  }
+  ```
 
   **Register and Login Object**
   A register object has the following attributes:
   ```
-{
+  {
   "name": STRING,
   "email": STRING,
    "password": STRING
-}
+  }
 ```
