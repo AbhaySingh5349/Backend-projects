@@ -1,0 +1,12 @@
+{
+  "preferences_list": [
+    {
+      "preferenceId": "64a3c668671cf6d42e91a8ce",
+      "categories": ["health", "science"]
+    },
+    {
+      "preferenceId": "64a406069c2be08f5deec3ed",
+      "categories": ["business", "sports"]
+    }
+  ]
+}
