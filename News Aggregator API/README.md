@@ -7,7 +7,7 @@ To run this project, you need to have the following software installed on your m
 * npm (Node Package Manager)
 * MongoDB
 
-  # Installation
+# Installation
 1. Clone the repository to your local machine:<br />
    ```git clone https://github.com/AbhaySingh5349/Backend-projects.git```
 2. Install the dependencies:<br />
@@ -25,7 +25,7 @@ To run this project, you need to have the following software installed on your m
 * GET /news => Retrieves news based on logged-in users' news preferences or from different media houses.
 * PUT /preferences => Add news categories for which the user wants to see news articles.
 
-  # Request and Response Format
+# Request and Response Format
 
   **Prefernce Object**
   A preference object has the following attributes:
