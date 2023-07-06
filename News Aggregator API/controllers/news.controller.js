@@ -2,8 +2,9 @@ const { newsService, preferencesService } = require("../services");
 let preferencesData = require("../preferences.json");
 const config = require("../config/config");
 const URLSearchParams = require("url-search-params");
+const cacheMiddleware = require("../middlewares/cache.middleware");
+const utils = require("../utils/utils");
 
-let url = "https://newsapi.org/v2/top-headlines";
 let payload = {
   pageSize: 20,
   apiKey: config.news_api_key,
@@ -34,7 +35,9 @@ const fetchNews = async (req, res) => {
       ];
 
       const searchParams = new URLSearchParams(payload);
-      let data = await newsService.newsArticles(`${url}?${searchParams}`);
+      let data = await newsService.newsArticles(
+        `${config.news_url}?${searchParams}`
+      );
 
       return res.status(200).json(data);
     } else {
@@ -44,7 +47,9 @@ const fetchNews = async (req, res) => {
         payload.category = category;
         let searchParams = new URLSearchParams(payload);
 
-        let promise = newsService.newsArticles(`${url}?${searchParams}`);
+        let promise = newsService.newsArticles(
+          `${config.news_url}?${searchParams}`
+        );
 
         promises_arr.push(promise);
       });
@@ -74,12 +79,24 @@ const fetchNewsWithKeyword = async (req, res) => {
 
   payload.q = searchKey;
   const searchParams = new URLSearchParams(payload);
-  let data = await newsService.newsArticles(`${url}?${searchParams}`);
+  let data = await newsService.newsArticles(
+    `${config.news_url}?${searchParams}`
+  );
 
+  const cacheKey = utils.generateURL(req);
+  await cacheMiddleware.redisClient.set(
+    cacheKey,
+    JSON.stringify(data),
+    "EX",
+    config.cache_expiration_time
+  );
   return res.status(200).json(data);
 };
+
+const markArticleAsRead = async (req, res) => {};
 
 module.exports = {
   fetchNews,
   fetchNewsWithKeyword,
+  markArticleAsRead,
 };

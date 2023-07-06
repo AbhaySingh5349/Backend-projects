@@ -11,4 +11,6 @@ module.exports = {
     secret: process.env.JWT_SECRET,
     accessExpirationMinutes: process.env.JWT_ACCESS_EXPIRATION_MINUTES,
   },
+  news_url: process.env.NEWS_BASE_URL,
+  cache_expiration_time: process.env.CACHE_EXPIRATION_SECONDS,
 };
