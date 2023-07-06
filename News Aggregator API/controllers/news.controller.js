@@ -4,6 +4,11 @@ const config = require("../config/config");
 const URLSearchParams = require("url-search-params");
 
 let url = "https://newsapi.org/v2/top-headlines";
+let payload = {
+  pageSize: 20,
+  apiKey: config.news_api_key,
+  language: "en",
+};
 
 const fetchNews = async (req, res) => {
   if (!req.user) {
@@ -15,11 +20,6 @@ const fetchNews = async (req, res) => {
 
   const idx = preferencesService.checkIdExists(preferences_arr, user_id);
   const categories_list = idx === -1 ? [] : preferences_arr[idx].categories;
-  let payload = {
-    pageSize: 20,
-    apiKey: config.news_api_key,
-    language: "en",
-  };
 
   try {
     if (categories_list.length === 0) {
@@ -62,6 +62,24 @@ const fetchNews = async (req, res) => {
   }
 };
 
+const fetchNewsWithKeyword = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).send(req.message);
+  }
+
+  const searchKey = req.params?.keyword;
+  if (!searchKey) {
+    return res.status(400).send("Invalid parameter");
+  }
+
+  payload.q = searchKey;
+  const searchParams = new URLSearchParams(payload);
+  let data = await newsService.newsArticles(`${url}?${searchParams}`);
+
+  return res.status(200).json(data);
+};
+
 module.exports = {
   fetchNews,
+  fetchNewsWithKeyword,
 };
