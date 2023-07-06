@@ -12,7 +12,7 @@ To run this project, you need to have the following software installed on your m
    ```git clone https://github.com/AbhaySingh5349/Backend-projects.git```
 2. Install the dependencies:<br />
    ```npm install```
-3. **Redis for Windows**
+3. **Redis for Windows**<br />
    => Follow: https://github.com/microsoftarchive/redis/releases<br />
    => Download: ```Redis-x64-3.0.504.msi```<br />
    => To start Redis: open the command prompt and enter *redis-cli*
