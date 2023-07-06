@@ -13,8 +13,8 @@ To run this project, you need to have the following software installed on your m
 2. Install the dependencies:<br />
    ```npm install```
 3. **Redis for Windows**
-   => Follow: https://github.com/microsoftarchive/redis/releases
-   => Download: ```Redis-x64-3.0.504.msi```
+   => Follow: https://github.com/microsoftarchive/redis/releases<br />
+   => Download: ```Redis-x64-3.0.504.msi```<br />
    => To start Redis: open the command prompt and enter *redis-cli*
 
 # Usage
