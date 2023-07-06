@@ -12,6 +12,11 @@ To run this project, you need to have the following software installed on your m
    ```git clone https://github.com/AbhaySingh5349/Backend-projects.git```
 2. Install the dependencies:<br />
    ```npm install```
+3. **Redis for Windows**<br />
+   => Follow: https://github.com/microsoftarchive/redis/releases<br />
+   => Download: ```Redis-x64-3.0.504.msi```<br />
+   => To start Redis: open the command prompt and enter *redis-cli*
+   => To use Redis in node: install package *npm install --save ioredis*
 
 # Usage
 1. Start the API server:<br />
@@ -25,6 +30,7 @@ To run this project, you need to have the following software installed on your m
 * POST /auth/register => Register as new user.
 * POST /auth/login => Login with email and password.
 * GET /news => Retrieves news based on logged-in users' news preferences or from different media houses.
+* GET /news/search/:keword => Retrieve news articles based on particular key
 * PUT /preferences => Add news categories for which the user wants to see news articles.
 
 # Request and Response Format
