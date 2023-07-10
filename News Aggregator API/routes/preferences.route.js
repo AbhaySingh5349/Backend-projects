@@ -10,4 +10,10 @@ router.put(
   preferencesController.updatePreferences
 );
 
+router.get(
+  "/",
+  authMiddleware.verifyToken,
+  preferencesController.retrievePreferences
+);
+
 module.exports = router;

@@ -83,7 +83,7 @@ const fetchNewsWithKeyword = async (req, res) => {
     `${config.news_url}?${searchParams}`
   );
 
-  const cacheKey = utils.generateURL(req);
+  const cacheKey = req.user._id + ":" + utils.generateURL(req);
   await cacheMiddleware.redisClient.set(
     cacheKey,
     JSON.stringify(data),
@@ -93,10 +93,68 @@ const fetchNewsWithKeyword = async (req, res) => {
   return res.status(200).json(data);
 };
 
-const markArticleAsRead = async (req, res) => {};
+const getReadArticles = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).send(req.message);
+  }
+
+  const keys = await cacheMiddleware.redisClient.keys("*");
+  console.log("keys: ", keys);
+
+  // let articles = [];
+
+  // keys.forEach(async (key) => {
+  //   let cachedNewsArticles = await cacheMiddleware.redisClient.get(key);
+  //   let cur_articles = JSON.parse(cachedNewsArticles).articles;
+  //   console.log("cur_articles: ", cur_articles);
+  //   cur_articles.forEach((article) => articles.push(article));
+  // });
+
+  // console.log("end");
+  // return res.status(200).json(articles);
+
+  // keys.forEach((key) => {
+  //   cacheMiddleware.redisClient
+  //     .get(key)
+  //     .then((value) => {
+  //       console.log("cachedNewsArticles: ", value);
+  //       let cur_articles = JSON.parse(cachedNewsArticles).articles;
+  //       console.log("cur_articles: ", cur_articles);
+  //       cur_articles.forEach((article) => articles.push(article));
+  //     })
+  //     .catch((err) => {
+  //       return res.status(500).json({ error: err });
+  //     });
+  // });
+
+  // console.log("end");
+  // console.log("articles: ", articles);
+  // return res.status(200).json(articles);
+
+  let promises_arr = [];
+  keys.forEach((key) => {
+    let cachedNewsArticles = cacheMiddleware.redisClient.get(key);
+    promises_arr.push(cachedNewsArticles); // stores pending promises
+  });
+
+  let articles = [];
+  Promise.all(promises_arr)
+    .then((values) => {
+      values.forEach((obj) => {
+        console.log("hello");
+        let cur_articles = JSON.parse(obj).articles;
+        cur_articles.forEach((article) => articles.push(article));
+      });
+
+      return res.status(200).json(articles);
+    })
+    .catch((err) => {
+      return res.status(500).json({ error: err });
+    });
+};
 
 module.exports = {
   fetchNews,
   fetchNewsWithKeyword,
-  markArticleAsRead,
+  getReadArticles,
 };
