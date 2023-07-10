@@ -8,7 +8,11 @@ const redisClient = new Redis({
 });
 
 const redisCache = async (req, res, next) => {
-  const cacheKey = utils.generateURL(req);
+  if (!req.user) {
+    return res.status(401).send(req.message);
+  }
+
+  const cacheKey = req.user._id + ":" + utils.generateURL(req);
 
   const cachedNewsArticles = await redisClient.get(cacheKey);
   if (cachedNewsArticles) {

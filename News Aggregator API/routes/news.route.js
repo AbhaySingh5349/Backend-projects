@@ -7,15 +7,11 @@ const router = express.Router();
 router.get("/", authMiddleware.verifyToken, newsController.fetchNews);
 router.get(
   "/search/:keyword",
-  cacheMiddleware.redisCache,
   authMiddleware.verifyToken,
+  cacheMiddleware.redisCache,
   newsController.fetchNewsWithKeyword
 );
 
-router.get(
-  "/:id/:read",
-  authMiddleware.verifyToken,
-  newsController.markArticleAsRead
-);
+router.get("/read", authMiddleware.verifyToken, newsController.getReadArticles);
 
 module.exports = router;
