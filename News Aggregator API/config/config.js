@@ -6,6 +6,7 @@ dotenv.config({ path: path.join(__dirname, "../.env") });
 module.exports = {
   port: process.env.PORT,
   db_url: process.env.MONGODB_URL,
+  test_db_url: process.env.MONGODB_TEST_URL,
   news_api_key: process.env.NEWS_API_KEY,
   jwt: {
     secret: process.env.JWT_SECRET,
