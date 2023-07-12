@@ -16,19 +16,33 @@ const createUser = async (userBody) => {
     };
   }
 
-  const hashedPassword = await bcrypt.hash(userBody.password, 12);
+  const hashedPassword = await bcrypt.hash(userBody.password, 8);
   userBody.password = hashedPassword;
-  const user = await User.create(userBody);
-  if (user) {
+
+  try {
+    const user = await User.create(userBody);
     return {
       user: user,
-      message: "User created successfully",
+      message: "User Registered Successfully!",
+    };
+  } catch (err) {
+    return {
+      user: null,
+      message: err,
     };
   }
-  return {
-    user: null,
-    message: "Failed to create user",
-  };
+
+  // const user = await User.create(userBody);
+  // if (user) {
+  //   return {
+  //     user: user,
+  //     message: "User Registered Successfully!",
+  //   };
+  // }
+  // return {
+  //   user: null,
+  //   message: "Failed to create user",
+  // };
 };
 
 const getUserByEmail = async (email) => {

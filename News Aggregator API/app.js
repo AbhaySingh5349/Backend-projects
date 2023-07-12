@@ -13,5 +13,3 @@ app.get("/", (req, res) => {
 app.use("/", routes);
 
 module.exports = app;
-
-// expired token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGE0MDYwNjljMmJlMDhmNWRlZWMzZWQiLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjg4NDgzMjIzLCJleHAiOjE2ODg0ODUwMjN9.LICd18PXg4Px6D3vAcxhZIXGRY5418bYwvWRB8veslI

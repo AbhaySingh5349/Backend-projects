@@ -8,3 +8,7 @@ npm install --save dotenv
 npm install --save validator
 npm install --save url-search-params
 npm install --save ioredis 
+npm install --save mocha
+npm install --save chai
+npm install --save chai-http
+npm install --save sinon

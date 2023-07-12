@@ -7,6 +7,10 @@
     {
       "preferenceId": "64a406069c2be08f5deec3ed",
       "categories": ["business", "sports"]
+    },
+    {
+      "categories": ["business", "sports", "health"],
+      "preferenceId": "64a9a6df6ae3f427dfa85f3c"
     }
   ]
 }
