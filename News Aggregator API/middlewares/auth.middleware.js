@@ -18,21 +18,21 @@ const verifyToken = (req, res, next) => {
           req.user = null;
           req.message = "Invalid JWT token: " + err;
           next();
-        }
-
-        User.findOne({
-          _id: decode.sub,
-        })
-          .then((user) => {
-            req.user = user;
-            req.message = "User validated";
-            next();
+        } else {
+          User.findOne({
+            _id: decode.sub,
           })
-          .catch((err) => {
-            req.user = null;
-            req.message = "User not found";
-            next();
-          });
+            .then((user) => {
+              req.user = user;
+              req.message = "User validated";
+              next();
+            })
+            .catch((err) => {
+              req.user = null;
+              req.message = "User not found";
+              next();
+            });
+        }
       }
     );
   } else {

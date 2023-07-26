@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "mocha --recursive 'test/**/*.js' --exit"
+    "test": "mocha --recursive 'test/**/*.js' --exit",
+    "test-coverage": "nyc mocha --recursive 'test/**/*.js' --exit",
+    "test-report": "nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "jsonwebtoken": "^9.0.0",
     "mocha": "^10.2.0",
     "mongoose": "^7.3.1",
+    "nyc": "^15.1.0",
     "path": "^0.12.7",
     "sinon": "^15.2.0",
     "url-search-params": "^1.1.0",
