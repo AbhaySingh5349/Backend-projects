@@ -12,3 +12,4 @@ npm install --save mocha
 npm install --save chai
 npm install --save chai-http
 npm install --save sinon
+npm install --save nyc (for generating coverage report)

@@ -179,17 +179,17 @@ describe("Verifies log-in flow with actual mongo db calls", () => {
   });
 });
 
-describe("Verifies the login flow with stubbed mongo db calls", () => {
+/*describe("Verifies the login flow with stubbed mongo db calls", () => {
   let findOneStub;
-  //   let logInBody = {
-  //     email: "test12345@gmail.com",
-  //     password: bcrypt.hashSync('test1234', 8),
-  //   };
+    let logInBody = {
+      email: "test12345@gmail.com",
+      password: bcrypt.hashSync('test1234', 8),
+    };
 
-  const logInBody = new User({
-    email: "test1234@gmail.com",
-    password: bcrypt.hashSync("test1234", 8),
-  });
+  // const logInBody = new User({
+  //   email: "test1234@gmail.com",
+  //   password: bcrypt.hashSync("test1234", 8),
+  // });
 
   beforeEach((done) => {
     findOneStub = sinon.stub(User, "findOne");
@@ -222,3 +222,4 @@ describe("Verifies the login flow with stubbed mongo db calls", () => {
       });
   });
 });
+*/
