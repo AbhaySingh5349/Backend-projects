@@ -1,0 +1,42 @@
+{
+  "parent": null,
+  "pid": 30668,
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\node_modules\\mocha\\bin\\mocha.js",
+    "--recursive",
+    "'test/**/*.js'",
+    "--exit"
+  ],
+  "execArgv": [],
+  "cwd": "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API",
+  "time": 1689139141650,
+  "ppid": 9036,
+  "coverageFilename": "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\.nyc_output\\b4568912-7d26-48a0-8173-610490344547.json",
+  "externalId": "",
+  "uuid": "b4568912-7d26-48a0-8173-610490344547",
+  "files": [
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\config\\config.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\models\\index.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\models\\user.model.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\app.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\index.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\auth.route.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\auth.controller.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\index.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\user.service.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\auth.service.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\token.service.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\news.service.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\preferences.service.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\news.route.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\news.controller.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\cache.middleware.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\utils\\utils.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\index.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\auth.middleware.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\preferences.route.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\preferences.controller.js",
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\validators\\preference.validator.js"
+  ]
+}
