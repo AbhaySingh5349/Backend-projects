@@ -1,0 +1,74 @@
+{
+  "processes": {
+    "b4568912-7d26-48a0-8173-610490344547": { "parent": null, "children": [] }
+  },
+  "files": {
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\config\\config.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\models\\index.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\models\\user.model.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\app.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\index.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\auth.route.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\auth.controller.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\index.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\user.service.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\auth.service.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\token.service.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\news.service.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\services\\preferences.service.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\news.route.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\news.controller.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\cache.middleware.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\utils\\utils.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\index.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\middlewares\\auth.middleware.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\routes\\preferences.route.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\controllers\\preferences.controller.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ],
+    "E:\\airtribe\\Projects\\Backend-projects\\News Aggregator API\\validators\\preference.validator.js": [
+      "b4568912-7d26-48a0-8173-610490344547"
+    ]
+  },
+  "externalIds": {}
+}
