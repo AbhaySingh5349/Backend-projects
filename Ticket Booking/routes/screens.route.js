@@ -6,6 +6,6 @@ router.route("/").get(screensController.getAllScreens);
 
 router.route("/:screenId").get(screensController.getScreenById);
 
-router.post("/", screensController.addScreens);
+router.post("/", screensController.addScreenToTheatre);
 
 module.exports = router;

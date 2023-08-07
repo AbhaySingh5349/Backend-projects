@@ -1,3 +1,4 @@
+const Sequelize = require("sequelize");
 const faker = require("faker");
 const { Theatre } = require("../models/theatre.model");
 
@@ -7,10 +8,10 @@ const getAllTheatres = async (req, res) => {
   return res.status(200).json(theatres);
 };
 
-const getTheatreById = (req, res) => {
+const getTheatreById = async (req, res) => {
   Theatre.findOne({
     where: { id: req.params.theatreId },
-    include: "screens", // This will fetch all screens associated with the theatre
+    include: "screens", // This will fetch all screens associated with the theatre,
   })
     .then((theatre) => {
       return res.status(200).json(theatre.toJSON());
@@ -20,30 +21,44 @@ const getTheatreById = (req, res) => {
     });
 };
 
-const addTheatres = (req, res) => {
-  const theatres = [];
-  for (let i = 0; i < req.body.count; i++) {
-    const name = faker.company.companyName();
-    const address = faker.address.streetAddress() + "," + faker.address.city();
+const getNextSevenDaysShows = async (req, res) => {
+  const theatre = await Theatre.findByPk(req.params.theatreId);
 
-    const theatre_promise = Theatre.create({ name, address });
-    theatres.push(theatre_promise);
-  }
+  const currentDate = new Date();
 
-  Promise.all(theatres)
-    .then((values) => {
-      return res.status(201).json(values);
+  const movies = await theatre.getMovies({
+    where: {
+      lastScreeningDate: { [Sequelize.Op.lte]: currentDate },
+      // lastScreeningDate: {
+      //   [Sequelize.Op.lte]: new Date(currentDate.getDate() + 7),
+      // },
+    },
+  });
+  return res.status(200).send(movies);
+};
+
+const addTheatre = async (req, res) => {
+  const name = faker.company.companyName();
+  const city = req.body.city;
+
+  const theatre = Theatre.build({
+    name,
+    city,
+  });
+
+  await theatre
+    .save()
+    .then(function (theatre) {
+      return res.status(201).json(theatre);
     })
-    .catch((error) => {
-      console.log(
-        `error in adding ${req.body.count} number of theatres: `,
-        error
-      );
+    .catch(function (error) {
+      return res.json(`error in adding theatre: `, error);
     });
 };
 
 module.exports = {
   getAllTheatres,
   getTheatreById,
-  addTheatres,
+  getNextSevenDaysShows,
+  addTheatre,
 };
