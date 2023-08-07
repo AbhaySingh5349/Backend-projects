@@ -6,6 +6,8 @@ router.route("/").get(theatresController.getAllTheatres);
 
 router.route("/:theatreId").get(theatresController.getTheatreById);
 
-router.post("/", theatresController.addTheatres);
+router.route("/shows/:theatreId").get(theatresController.getNextSevenDaysShows);
+
+router.post("/", theatresController.addTheatre);
 
 module.exports = router;

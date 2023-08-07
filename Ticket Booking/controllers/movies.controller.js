@@ -10,8 +10,6 @@ const addMovie = async (request, response) => {
   const { name, overview, firstScreeningDate, lastScreeningDate } =
     request.body;
 
-  console.log("request.body: ", request.body);
-
   const movie = Movie.build({
     name,
     overview,

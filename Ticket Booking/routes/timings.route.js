@@ -4,6 +4,6 @@ const timingsController = require("../controllers/timings.controller");
 
 router.route("/").get(timingsController.getAllTimings);
 
-router.post("/", timingsController.addTimings);
+router.post("/", timingsController.addTimingsToScreen);
 
 module.exports = router;

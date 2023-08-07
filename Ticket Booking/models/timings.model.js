@@ -1,21 +1,33 @@
 const { sequelize } = require("../config/mysqldb");
 const DataTypes = require("sequelize");
 
-const Timings = sequelize.define("timings", {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
+const Timings = sequelize.define(
+  "Timings",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    time: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    ticketsAvailable: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   },
-  time: {
-    type: DataTypes.TIME,
-    allowNull: false,
-  },
-  ticketsAvailable: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: true,
-  },
-});
+  {
+    sequelize,
+    modelName: "Timings",
+    defaultScope: {
+      attributes: {
+        exclude: ["createdAt", "updatedAt"],
+      },
+    },
+  }
+);
 
 sequelize
   .sync()

@@ -2,21 +2,29 @@ const { sequelize } = require("../config/mysqldb");
 const DataTypes = require("sequelize");
 const { Timings } = require("./timings.model");
 
-const Screen = sequelize.define("screen", {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
+const Screen = sequelize.define(
+  "Screen",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    capacity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  capacity: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-});
+  {
+    sequelize,
+    modelName: "Screen",
+    defaultScope: {
+      attributes: {
+        exclude: ["createdAt", "updatedAt"],
+      },
+    },
+  }
+);
 
 Screen.hasMany(Timings, {
   foreignKey: "screenId",
