@@ -1,5 +1,5 @@
 # API Endpoints
-1. Movies :
+**1. Movies :**
    
   * POST /movies => add new movie
 
