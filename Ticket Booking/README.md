@@ -76,6 +76,25 @@
 ]
 ```
 
+**3. Screens :**
+  * POST /screens
+```
+{
+    "theatreId": INT,
+    "capacity": INT
+}
+```
+
+**4. Timings :**
+   * 
+```
+{
+    "movieId": INT,
+    "theatreId": INT,
+    "screenId": INT,
+    "time": STRING (24 hrs format),
+}
+```
 
 
 
