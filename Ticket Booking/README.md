@@ -86,7 +86,7 @@
 ```
 
 **4. Timings :**
-   * 
+   * POST /timings
 ```
 {
     "movieId": INT,
