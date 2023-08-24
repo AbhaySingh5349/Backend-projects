@@ -5,10 +5,10 @@
 
 ```
 {
-  "name": "Crazy Stupid Love",
-  "overview": "fun and drama",
-  "firstScreeningDate": "2023-06-25",
-  "lastScreeningDate": "2023-08-28"
+  "name": STRING,
+  "overview": STRING,
+  "firstScreeningDate": STRING, // "YYYY-MM-DD"
+  "lastScreeningDate": STRING // "YYYY-MM-DD"
 }
 ```
 
@@ -28,20 +28,56 @@
                 "time": STRING (12 hrs format),
                 "ticketsAvailable": BOOLEAN
             }
+            .
+            .
+            .
         ]
     },
+    .
+    .
+    .
+]
+```
+
+**2. Theatres :**
+   * POST /theatres => add theatre to city
+```
+{
+    "city": STRING
+}
+```
+   * GET /theatres/shows/:theatreId => get all shows in next 7 days
+```
+[
     {
-        "name": "THEATRE_NAME",
+        "name": "MOVIE_NAME",
+        "overview": STRING,
+        "firstScreeningDate": STRING, // "YYYY-MM-DD"
+        "lastScreeningDate": STRING, // "YYYY-MM-DD"
         "Timings": [
             {
                 "screenId": INT,
                 "time": STRING (12 hrs format),
                 "ticketsAvailable": BOOLEAN
+            },
+            {
+                "screenId": INT,
+                "time": STRING (12 hrs format),
+                "ticketsAvailable": BOOLEAN
             }
+            .
+            .
+            .
         ]
     }
+    .
+    .
+    .
 ]
 ```
+
+
+
 
 
 
