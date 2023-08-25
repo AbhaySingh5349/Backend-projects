@@ -10,6 +10,21 @@
   "lastScreeningDate": STRING // "YYYY-MM-DD"
 }
 ```
+   * GET /movies?language=...&genres=g1,g2,... => get all movies based on language and genre
+```
+[
+    {
+        "id": INT,
+        "name": STRING,
+        "overview": STRING,
+        "firstScreeningDate": STRING, // "YYYY-MM-DD"
+        "lastScreeningDate": STRING, // "YYYY-MM-DD"
+    },
+    .
+    .
+    .
+]
+```
 
    * POST /movies/details/ => add movie static data
 ```
