@@ -18,7 +18,20 @@
         "name": STRING,
         "overview": STRING,
         "firstScreeningDate": STRING, // "YYYY-MM-DD"
-        "lastScreeningDate": STRING, // "YYYY-MM-DD"
+        "lastScreeningDate": STRING, // "YYYY-MM-DD",
+        "reviews": [
+            {
+                "comment": STRING,
+                "rating": FLOAT
+            },
+            {
+                "comment": STRING,
+                "rating": FLOAT
+            }
+            .
+            .
+            .
+        ]
     },
     .
     .
