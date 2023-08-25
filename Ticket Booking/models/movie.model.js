@@ -2,7 +2,8 @@ const { sequelize } = require("../config/mysqldb");
 const DataTypes = require("sequelize");
 const { Theatre } = require("./theatre.model");
 const { Timings } = require("./timings.model");
-const { Screen } = require("./screen.model");
+const { MovieDetails } = require("./movie_details.model");
+const { Reviews } = require("./reviews.model");
 
 const Movie = sequelize.define(
   "Movie",
@@ -51,11 +52,20 @@ Theatre.belongsToMany(Movie, {
   through: { model: Timings, unique: false },
 });
 
-// Theatre.hasMany(Screen);
-// Screen.belongsTo(Theatre);
+Movie.hasOne(MovieDetails, {
+  foreignKey: "movieId",
+  as: "moviedetails",
+});
 
-// Movie.hasMany(Timings);
-// Timings.belongsTo(Movie);
+// One-to-many association between Movie and Reviews
+Movie.hasMany(Reviews, {
+  foreignKey: "movieId",
+  as: "reviews",
+});
+
+Reviews.belongsTo(Movie, {
+  foreignKey: "movieId",
+});
 
 sequelize
   .sync()
