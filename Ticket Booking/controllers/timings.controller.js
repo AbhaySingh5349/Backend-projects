@@ -45,42 +45,15 @@ const addTimingsToScreen = async (req, res) => {
 
   const timings = await screen.getTimings();
   const movies = await theatre.getMovies();
-  const theatres = await await movie.getTheatres();
-  console.log("await screen.getTimings(): ", timings.dataValues);
-  console.log("await theatre.getMovies(): ", movies.dataValues);
-  console.log("await movie.getTheatres(): ", theatres.dataValues);
+  const theatres = await movie.getTheatres();
+  console.log("await screen.getTimings(): ", timings);
+  console.log("await theatre.getMovies(): ", movies);
+  console.log("await movie.getTheatres(): ", theatres);
 
-  return res.status(201).json(time);
+  return res.status(201).json({ time, timings, movies, theatres });
 };
 
 module.exports = {
   getAllTimings,
   addTimingsToScreen,
 };
-
-/*
-{
-  "name": "Crazy Stupid Love",
-  "overview": "fun and drama",
-  "firstScreeningDate": "2023-03-25",
-  "lastScreeningDate": "2023-04-28"
-}
-{
-  "name": "YJHD",
-  "overview": "trekking trip",
-  "firstScreeningDate": "2023-03-10",
-  "lastScreeningDate": "2023-04-10"
-}
-{
-  "name": "ZNMD",
-  "overview": "vacation in Spain",
-  "firstScreeningDate": "2023-01-15",
-  "lastScreeningDate": "2023-02-25"
-}
-{
-  "name": "Wolf of walt street",
-  "overview": "fraud and malfeasance",
-  "firstScreeningDate": "2023-01-11",
-  "lastScreeningDate": "2023-02-8"
-} 
-*/

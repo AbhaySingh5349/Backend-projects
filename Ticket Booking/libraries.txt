@@ -4,3 +4,4 @@ npm install --save dotenv
 npm install --save sequelize
 npm install --save sequelize-cli
 npm install --save mysql2
+npm install --save ioredis 

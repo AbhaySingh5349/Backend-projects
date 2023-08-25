@@ -8,4 +8,5 @@ module.exports = {
   sql_db_name: process.env.SQL_DB_NAME,
   sql_db_username: process.env.SQL_DB_USERNAME,
   sql_db_password: process.env.SQL_DB_PASSWORD,
+  cache_expiration_time: process.env.CACHE_EXPIRATION_SECONDS,
 };
