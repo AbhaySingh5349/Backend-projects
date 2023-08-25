@@ -46,7 +46,7 @@
     "city": STRING
 }
 ```
-   * GET /theatres/shows/:theatreId => get all shows in next 7 days
+   * GET /theatres/shows/:theatreId => get all shows of particular theatre in next 7 days
 ```
 [
     {
@@ -70,6 +70,37 @@
             .
         ]
     }
+    .
+    .
+    .
+]
+```
+   * GET /theatres/city/:city => get information of all movies for all theatres in a city
+```
+[
+    {
+        "theatre": "THEATRE_NAME",
+        "movies": [
+            {
+                "name": "MOVIE_NAME",
+                "overview": STRING,
+                "firstScreeningDate": STRING, // "YYYY-MM-DD"
+                "lastScreeningDate": STRING, // "YYYY-MM-DD"
+                "Timings": [
+                    {
+                        "screenId": INT,
+                        "time": STRING (12 hrs format),
+                        "ticketsAvailable": BOOLEAN
+                    },
+                    {
+                        "screenId": INT,
+                        "time": STRING (12 hrs format),
+                        "ticketsAvailable": BOOLEAN
+                    }
+                ]
+            }
+        ]
+    },
     .
     .
     .
