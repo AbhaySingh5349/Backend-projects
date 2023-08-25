@@ -23,7 +23,7 @@
 }
 ```
 
-   * GET /movies/details/:id => get movie details by id
+   * GET /movies/details/:id => get movie details by id with *redis-caching*
 ```
 {
     "name": STRING,
