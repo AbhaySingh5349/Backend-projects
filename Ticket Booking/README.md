@@ -2,13 +2,40 @@
 **1. Movies :**
    
   * POST /movies => add new movie
-
 ```
 {
   "name": STRING,
   "overview": STRING,
   "firstScreeningDate": STRING, // "YYYY-MM-DD"
   "lastScreeningDate": STRING // "YYYY-MM-DD"
+}
+```
+
+   * POST /movies/details/ => add movie static data
+```
+{
+    "movieId": INT,
+    "name": STRING,
+    "cast": [STRING, STRING, ...],
+    "plot": STRING,
+    "language": STRING,
+    "genre": STRING
+}
+```
+
+   * GET /movies/details/:id => get movie details by id
+```
+{
+    "name": STRING,
+    "moviedetails": {
+        "cast": [
+            STRING,
+            STRING, ...
+        ],
+        "plot": STRING,
+        "language": STRING,
+        "genre": STRING
+    }
 }
 ```
 
