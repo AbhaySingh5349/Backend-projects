@@ -166,7 +166,7 @@
 ```
 
 **3. Screens :**
-  * POST /screens
+  * POST /screens => add screen to particular theatre
 ```
 {
     "theatreId": INT,
@@ -175,7 +175,7 @@
 ```
 
 **4. Timings :**
-   * POST /timings
+   * POST /timings => add timings to particular screen and movie
 ```
 {
     "movieId": INT,
