@@ -13,6 +13,9 @@ router.use("/screens", screensRoute);
 const timingsRoute = require("./timings.route");
 router.use("/timings", timingsRoute);
 
+const esRoute = require("./elastic-search.route");
+router.use("/index", esRoute);
+
 module.exports = router;
 
 /*
