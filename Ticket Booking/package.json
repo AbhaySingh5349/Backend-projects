@@ -14,6 +14,7 @@
   "author": "abhaysingh5349",
   "license": "ISC",
   "dependencies": {
+    "@elastic/elasticsearch": "^8.9.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "faker": "^5.5.3",
