@@ -16,7 +16,7 @@
    * from 'elasticsearch' terminal save password and token for setting up 'Dev Tools console'<br />
    * from 'kibana' terminal open link and add 'token', 'username = elastic' and 'password' to open 'Dev Tools console'<br />
    * check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ```https://localhost:9200/```
-   * in ```elasticsearch.yml```:
+   * in ```elasticsearch.yml```:<br />
      **modify**
      ```
      xpack.security.http.ssl:
@@ -25,11 +25,11 @@
      xpack.security.transport.ssl:
      enabled: false
      ```
-     **add**
+     **add**<br />
      ```
      http.cors.allow-headers: "Authorization, X-Requested-With, Content-Type, Content-Length"
      ```
-   * in ```roles.yml``` add
+   * in ```roles.yml``` add<br />
      ```
      admins:
      cluster:
