@@ -297,7 +297,7 @@
 
    * DELETE http://localhost:9200/INDEX_NAME => for deleting data of index
    * POST http://localhost:3000/index/movies => create bulk index for MovieDetails table
-   * GET http://localhost:3000/index/movies?q=... => search for movies based on ```movie name```, ```actors name```, ```genre```, ```language```
+   * GET /index/movies?q=:query&language=:language&genre=:genre => search for movies based on ```movie name```, ```actors name```, ```genre```, ```language```
 ```
 {
     "status": "Success",
