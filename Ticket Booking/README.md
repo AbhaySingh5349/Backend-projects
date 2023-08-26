@@ -291,3 +291,28 @@
 ```
 
    * DELETE http://localhost:9200/INDEX_NAME => for deleting data of index
+   * POST /index/movies => create bulk index for MovieDetails table
+   * GET /index/movies?q=... => search for movies based on ```movie name```, ```actors name```, ```genre```, ```language```
+```
+{
+    "status": "Success",
+    "result": INT,
+    "data": [
+        {
+            "_index": INDEX_NAME,
+            "_id": "_PCpMooB12Zcy5pb875B",
+            "_score": 1.469157,
+            "_source": {
+                "name": "MOVIE_NAME",
+                "cast": "STRING, STRING, ...",
+                "plot": STRING,
+                "language": STRING,
+                "genre": STRING
+            }
+        }
+        .
+        .
+        .
+    ]
+}
+```
