@@ -16,6 +16,40 @@
    * from 'elasticsearch' terminal save password and token for setting up 'Dev Tools console'<br />
    * from 'kibana' terminal open link and add 'token', 'username = elastic' and 'password' to open 'Dev Tools console'<br />
    * check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ```https://localhost:9200/```
+   * in ```elasticsearch.yml```:
+     **modify**
+     ```
+     xpack.security.http.ssl:
+     enabled: false
+
+     xpack.security.transport.ssl:
+     enabled: false
+     ```
+     **add**
+     ```
+     http.cors.allow-headers: "Authorization, X-Requested-With, Content-Type, Content-Length"
+     ```
+   * in ```roles.yml``` add
+     ```
+     admins:
+     cluster:
+       - all
+     indices:
+       - names:
+           - "*"
+         privileges:
+           - all
+      devs:
+        cluster:
+          - manage
+        indices:
+          - names:
+              - "*"
+            privileges:
+              - write
+              - delete
+              - create_index
+     ```
 
 # API Endpoints
 **1. Movies :**
