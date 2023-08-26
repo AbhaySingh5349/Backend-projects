@@ -15,7 +15,7 @@
    * use 'elasticsearch' and 'kibana' in separate terminals<br />
    * from 'elasticsearch' terminal save password and token for setting up 'Dev Tools console'<br />
    * from 'kibana' terminal open link and add 'token', 'username = elastic' and 'password' to open 'Dev Tools console'<br />
-   * check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ``https://localhost:9200/```
+   * check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ```https://localhost:9200/```
 
 # API Endpoints
 **1. Movies :**
