@@ -4,7 +4,7 @@
 2. Install the dependencies:<br />
    ```npm install```
 3. **Redis for Windows**<br />
-   => Follow: https://github.com/microsoftarchive/redis/releases<br />
+   * Follow: https://github.com/microsoftarchive/redis/releases<br />
    => Download: ```Redis-x64-3.0.504.msi```<br />
    => To start Redis: open the command prompt and enter *redis-cli*<br />
    => To use Redis in node: install package *npm install --save ioredis*
