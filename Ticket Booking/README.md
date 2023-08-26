@@ -239,10 +239,55 @@
 }
 ```
 
+**5. Elastic Search :** Make sure to set *Authorization* as *Basic Auth* and add *username* and *password* for Elastic Search
+   * GET http://localhost:9200/INDEX_NAME/_search => get data stored across the particular index (here ```movie_details_idx```)
+```
+{
+    "took": 15,
+    "timed_out": false,
+    "_shards": {
+        "total": 1,
+        "successful": 1,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": INT,
+            "relation": "eq"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": INDEX_NAME,
+                "_id": "-vCpMooB12Zcy5pb874h",
+                "_score": 1.0,
+                "_source": {
+                    "name": "MOVIE_NAME",
+                    "cast": "STRING, STRING, ...",
+                    "plot": STRING,
+                    "language": STRING,
+                    "genre": STRING
+                }
+            },
+            {
+                "_index": INDEX_NAME,
+                "_id": "-_CpMooB12Zcy5pb874z",
+                "_score": 1.0,
+                "_source": {
+                    "name": "MOVIE_NAME",
+                    "cast": "STRING, STRING, ...",
+                    "plot": STRING,
+                    "language": STRING,
+                    "genre": STRING
+                }
+            },
+            .
+            .
+            .
+        ]
+    }
+}
+```
 
-
-
-
-
-
-
+   * DELETE http://localhost:9200/INDEX_NAME => for deleting data of index
