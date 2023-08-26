@@ -5,17 +5,17 @@
    ```npm install```
 3. **Redis for Windows**<br />
    * Follow: https://github.com/microsoftarchive/redis/releases<br />
-   => Download: ```Redis-x64-3.0.504.msi```<br />
-   => To start Redis: open the command prompt and enter *redis-cli*<br />
-   => To use Redis in node: install package *npm install --save ioredis*
+   * Download: ```Redis-x64-3.0.504.msi```<br />
+   * To start Redis: open the command prompt and enter *redis-cli*<br />
+   * To use Redis in node: install package *npm install --save ioredis*
 4. **Kibana for Windows**<br />
-   => Download ES: https://www.elastic.co/downloads/elasticsearch<br />
-   => Downlaod Kibana: https://www.elastic.co/downloads/kibana<br />
-   => set env variables for paths till 'bin' folder<br />
-   => use 'elasticsearch' and 'kibana' in separate terminals<br />
-   => from 'elasticsearch' terminal save password and token for setting up 'Dev Tools console'<br />
-   => from 'kibana' terminal click on the link to configure 'Dev Tools' and add 'token', 'username = elastic' and 'password' to open 'Dev Tools console'<br />
-   => check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ``https://localhost:9200/```
+   * Download ES: https://www.elastic.co/downloads/elasticsearch<br />
+   * Downlaod Kibana: https://www.elastic.co/downloads/kibana<br />
+   * set env variables for paths till 'bin' folder<br />
+   * use 'elasticsearch' and 'kibana' in separate terminals<br />
+   * from 'elasticsearch' terminal save password and token for setting up 'Dev Tools console'<br />
+   * from 'kibana' terminal open link and add 'token', 'username = elastic' and 'password' to open 'Dev Tools console'<br />
+   * check cluster health in 'Dev Tools console' using ``` GET /_cluster/health ``` and for browser use ``https://localhost:9200/```
 
 # API Endpoints
 **1. Movies :**
