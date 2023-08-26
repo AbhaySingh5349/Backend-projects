@@ -8,7 +8,7 @@
    * Download: ```Redis-x64-3.0.504.msi```<br />
    * To start Redis: open the command prompt and enter *redis-cli*<br />
    * To use Redis in node: install package *npm install --save ioredis*
-4. **Kibana for Windows**<br />
+4. **Elastic Search and Kibana for Windows**<br />
    * Download ES: https://www.elastic.co/downloads/elasticsearch<br />
    * Downlaod Kibana: https://www.elastic.co/downloads/kibana<br />
    * set env variables for paths till 'bin' folder<br />
