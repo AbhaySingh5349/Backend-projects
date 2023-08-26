@@ -3,12 +3,17 @@
    ```git clone https://github.com/AbhaySingh5349/Backend-projects.git```
 2. Install the dependencies:<br />
    ```npm install```
-3. **Redis for Windows**<br />
+3. **MySQL for Windows**<br />
+   * Download MySQL community server and Workbench: https://dev.mysql.com/downloads/mysql/
+   * Create DB in MySQL with same name used in node application
+   * To use sequelize in node: *npm install --save sequelize* and *npm install --save mysql2*
+4. **Redis for Windows**<br />
    * Follow: https://github.com/microsoftarchive/redis/releases<br />
    * Download: ```Redis-x64-3.0.504.msi```<br />
    * To start Redis: open the command prompt and enter *redis-cli*<br />
    * To use Redis in node: install package *npm install --save ioredis*
-4. **Elastic Search and Kibana for Windows**<br />
+5. **Elastic Search and Kibana for Windows**<br />
+   * Follow: https://www.elastic.co/guide/en/elasticsearch/reference/8.9/zip-windows.html<br />
    * Download ES: https://www.elastic.co/downloads/elasticsearch<br />
    * Downlaod Kibana: https://www.elastic.co/downloads/kibana<br />
    * set env variables for paths till 'bin' folder<br />
@@ -291,8 +296,8 @@
 ```
 
    * DELETE http://localhost:9200/INDEX_NAME => for deleting data of index
-   * POST /index/movies => create bulk index for MovieDetails table
-   * GET /index/movies?q=... => search for movies based on ```movie name```, ```actors name```, ```genre```, ```language```
+   * POST http://localhost:3000/index/movies => create bulk index for MovieDetails table
+   * GET http://localhost:3000/index/movies?q=... => search for movies based on ```movie name```, ```actors name```, ```genre```, ```language```
 ```
 {
     "status": "Success",
