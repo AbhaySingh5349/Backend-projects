@@ -18,7 +18,7 @@ To run this project, you need to have the following software installed on your m
    => set env variables for paths till 'bin' folder<br />
    => use 'mongod' and 'mongosh' to establish connection in separate terminals<br />
    => npm install mongodb
-5. **Redis for Windows**<br />
+4. **Redis for Windows**<br />
    => Follow: https://github.com/microsoftarchive/redis/releases<br />
    => Download: ```Redis-x64-3.0.504.msi```<br />
    => To start Redis: open the command prompt and enter *redis-cli*<br />
