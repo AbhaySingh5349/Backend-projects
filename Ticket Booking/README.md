@@ -29,7 +29,8 @@
      ```
      http.cors.allow-headers: "Authorization, X-Requested-With, Content-Type, Content-Length"
      ```
-   * in ```roles.yml``` add<br />
+   * in ```roles.yml``` <br />
+     **add**
      ```
      admins:
      cluster:
