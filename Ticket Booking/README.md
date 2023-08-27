@@ -152,6 +152,13 @@
     .
 ]
 ```
+   * POST /movies/reviews/:movieId => add review to movie
+```
+{
+    "comment": STRING,
+    "rating": FLOAT // [0,5]
+}
+```
 
 **2. Theatres :**
    * POST /theatres => add theatre to city
