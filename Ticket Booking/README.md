@@ -251,7 +251,7 @@
 }
 ```
 
-**5. Elastic Search :** Make sure to set *Authorization* as *Basic Auth* and add *username* and *password* for Elastic Search
+**5. Elastic Search :** Make sure to set *Authorization* as *Basic Auth* in *Postman* and add *username* and *password* for Elastic Search
    * GET http://localhost:9200/INDEX_NAME/_search => get data stored across the particular index (here ```movie_details_idx```)
 ```
 {
