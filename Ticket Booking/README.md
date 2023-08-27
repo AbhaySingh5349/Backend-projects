@@ -152,13 +152,6 @@
     .
 ]
 ```
-   * POST /movies/reviews/:movieId => add review to movie
-```
-{
-    "comment": STRING,
-    "rating": FLOAT // [0,5]
-}
-```
 
 **2. Theatres :**
    * POST /theatres => add theatre to city
@@ -251,7 +244,16 @@
 }
 ```
 
-**5. Elastic Search :** Make sure to set *Authorization* as *Basic Auth* in *Postman* and add *username* and *password* for Elastic Search
+**5. Reviews :**
+   * POST /movies/reviews/:movieId => add review to movie
+```
+{
+    "comment": STRING,
+    "rating": FLOAT // [0,5]
+}
+```
+
+**6. Elastic Search :** Make sure to set *Authorization* as *Basic Auth* in *Postman* and add *username* and *password* for Elastic Search
    * GET http://localhost:9200/INDEX_NAME/_search => get data stored across the particular index (here ```movie_details_idx```)
 ```
 {
